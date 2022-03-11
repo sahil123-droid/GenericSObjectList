@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Generic Sbject List</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property required="true" name="object" label="SObject Name" type="String" />
+            <property required="true" name="relation" label="Enter Relation" type="String" />
+            <property required="true" name="fields" label="Enter Field Api Name seprated by commas" type="String" />
+            <property name="filter" placeholder="eg. Name Like '%xyz%'" type="String" label="Enter condition(s) for filter" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

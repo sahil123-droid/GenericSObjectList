@@ -1,0 +1,32 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" small-device-size="4" medium-device-size="4" large-device-size="4"
+            padding="around-small">
+            <lightning-button class="slds-p-around_x-small" label="Previous" icon-name="utility:chevronleft"
+                onclick={previousHandler} disabled={disablePrevious}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow" size="12" small-device-size="4" medium-device-size="4"
+            large-device-size="4">
+            <br>
+            <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                    <select aria-describedby="error-01" class="slds-select" onchange={handleChange} id="select-01">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <p class="slds-text-align_center slds-p-around_x-small">Displaying {currentPage} of {totalPage} Page</p>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="slds-clearfix" small-device-size="4" medium-device-size="4" large-device-size="4"
+            padding="around-small">
+            <div class="slds-float_right">
+                <lightning-button label="Next" class="slds-p-around_x-small" icon-name="utility:chevronright"
+                    onclick={nextHandler} disabled={disableNext}></lightning-button>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>
